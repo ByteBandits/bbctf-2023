@@ -1,0 +1,5 @@
+Challenge Name : Tree of Secrets
+
+Hint: The message is encoded in the whispers of the wind, buried deep in the roots of a tree. Uncover the secret by listening to the silence between the lines and exploring the branches.
+
+Interpretation: This hint implies that there is a hidden message that is being transmitted in a subtle way, possibly through a method of compression like Huffman coding which uses a binary tree to represent the encoded data, where the more frequently occurring characters are closer to the root of the tree. The "listen to the silence between the lines" and "explore the branches" could refer to the need to extract the hidden message from the encoded data by navigating the Huffman tree structure, and possibly by understanding the context of the message and the way it was encoded.
