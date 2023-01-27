@@ -20,14 +20,3 @@ def encrypt(text, key):
 
 print("c :", encrypt(FLAG, key))
 print("hash :", md5(FLAG.encode("ascii")).hexdigest())
-
-
-# alphabets = "abcdefghijklmnopqrstuvwxyz0123456789_{}"
-# print(alphabets)
-# key = "d83jk1fyjs"
-
-# k :
-# c : LMIG}RPEDOEEWKJIQIWKJWMNDTSR}TFVUFWYOCBAJBQ
-# c = "ig3piomvwfactgk3}fagot0vossega4btwof8x"
-
-# 17382b1a9caad37bd127f2a7984ccbb9
