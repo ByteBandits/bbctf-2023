@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <title>Top Secret Project</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      label {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+      }
+      input[type="password"] {
+        font-size: 1.2em;
+        padding: 5px;
+        width: 400px;
+        margin-bottom: 20px;
+      }
+      button {
+        font-size: 1.2em;
+        padding: 5px 10px;
+        background-color: #4CAF50;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      pre {
+        background-color: #eee;
+        padding: 20px;
+        white-space: pre-wrap;
+        margin-top: 20px;
+        display: none;
+      }
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Top Secret Project</h1>
+    <form>
+      <label for="input">Enter the password:</label>
+      <input type="password" id="input">
+      <button type="button" onclick="sendRequest()">Submit</button>
+    </form>
+    <p class="error" id="error-message"></p>
+    <pre id="debug-message"></pre>
+  </body>
+  <script>
+    function sendRequest() {
+      let length = document.getElementById("input").value;
+      fetch("/api/error?length=" + length)
+        .then(response => response.text())
+        .then(text => {
+          if (text.startsWith("Error")) {
+            document.getElementById("error-message").textContent = text;
+            document.getElementById("error-message").style.display = "block";
+            document.getElementById("debug-message").style.display = "none";
+          } else {
+            document.getElementById("debug-message").textContent = text;
+            document.getElementById("debug-message").style.display = "block";
+            document.getElementById("error-message").style.display = "none";
+          }
+        });
+    }
+  </script>
+  
+</html>

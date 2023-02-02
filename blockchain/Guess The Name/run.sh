@@ -2,8 +2,10 @@
 
 IMAGE="$1"
 PORT="$2"
-HTTP_PORT="$3"
-SHARED_SECRET="$RANDOM$RANDOM$RANDOM$RANDOM$RANDOM$RANDOM"
+HTTP_PORT=8545
+SHARED_SECRET="7e8306aca5ab4eeeaac5c6b99715c8733b936f36d162513a552caac87b90"
+FLAG="flag{A1l_17s_r3quirED_is_a_1iI7lE_5oliDity}"
+ETH_RPC_URL="https://eth-goerli.g.alchemy.com/v2/bZbmrZezKTT7LL-T1WX-sJCPA6XFdgtN"
 
 echo "[+] running challenge"
 exec docker run \
