@@ -17,4 +17,5 @@ exec docker run \
     -e "SHARED_SECRET=$SHARED_SECRET" \
     -p "$PORT:$PORT" \
     -p "$HTTP_PORT:$HTTP_PORT" \
+    -d \
     "$IMAGE"
