@@ -1,0 +1,50 @@
+version: "3.9"
+services:
+  web1:
+    build: "./web/Improper-Error-Handling"
+    ports:
+      - "1001:5000"
+  web2:
+    build: "./web/Peer Pressure"
+    ports:
+      - "1002:5000"
+  misc1:
+    build: "./misc/Virus Attack"
+    ports:
+      - "2001:9999"
+  misc2:
+    build: "./misc/Meaning of Life"
+    ports:
+      - "2002:5000"
+  crypto1:
+    build: "./crypto/Crypto Masquerade"
+    ports:
+      - "3001:9999"
+  crypto2:
+    build: "./crypto/Visionary Cipher"
+    ports:
+      - "3002:9999"
+  pwn1:
+    build: "./pwn/ezpwn1"
+    ports:
+      - "4001:8000"
+  pwn2:
+    build: "./pwn/ezpwn2"
+    ports:
+      - "4002:8000"
+  pwn3:
+    build: "./pwn/ez-pz-xor"
+    ports:
+      - "4003:8000"
+  blockchain:
+    build: "./blockchain/Guess The Name"
+    environment:
+      - PORT:5003
+      - HTTP_PORT:8545
+      - ETH_RPC_URL:"https://eth-goerli.g.alchemy.com/v2/bZbmrZezKTT7LL-T1WX-sJCPA6XFdgtN"
+      - FLAG:"flag{A1l_17s_r3quirED_is_a_1iI7lE_5oliDity}"
+      - SHARED_SECRET:"7e8306aca5ab4eeeaac5c6b99715c8733b936f36d162513a552caac87b90"
+      - PUBLIC_IP:$PUBLIC_IP
+    ports:
+      - "$PORT:$PORT"
+      - "$HTTP_PORT:$HTTP_PORT"

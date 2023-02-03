@@ -7,9 +7,11 @@ RUN apt-get update -y && apt-get install -y \
 
 WORKDIR /ctf
 
-COPY . .
+COPY requirements.txt requirements.txt  
 
 RUN pip3 install -r requirements.txt
+
+COPY . .
 
 CMD ["tcpserver", "0.0.0.0", "9999", "python3", "chal.py"]
 
