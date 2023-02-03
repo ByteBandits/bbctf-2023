@@ -17,7 +17,7 @@ from web3.types import TxReceipt
 from eth_sandbox import get_shared_secret
 
 HTTP_PORT = os.getenv("HTTP_PORT", "8545")
-PUBLIC_IP = os.getenv("PUBLIC_IP", "127.0.0.1")
+PUBLIC_IP = os.getenv("PUBLIC_IP", "1.1.1.1")
 
 CHALLENGE_ID = os.getenv("CHALLENGE_ID", "challenge")
 ENV = os.getenv("ENV", "dev")

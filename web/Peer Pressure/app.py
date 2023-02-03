@@ -8,7 +8,7 @@ def input():
     return render_template("index.html", result="")
 
 
-@app.route("/lol", methods=["GET", "POST", "HEAD"])
+@app.route("/aGVhZA==", methods=["GET", "POST", "HEAD"])
 def rickroll():
     if request.method == "GET":
         return redirect("https://youtu.be/dQw4w9WgXcQ")
