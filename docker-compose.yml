@@ -54,4 +54,4 @@ services:
         - ETH_RPC_URL=https://eth-goerli.g.alchemy.com/v2/bZbmrZezKTT7LL-T1WX-sJCPA6XFdgtN
         - FLAG=flag{A1l_17s_r3quirED_is_a_1iI7lE_5oliDity}
         - SHARED_SECRET=7e8306aca5ab4eeeaac5c6b99715c8733b936f36d162513a552caac87b90
-        - PUBLIC_IP=blockchain:bbctf.fluxus.co.in
+        - PUBLIC_IP=blockchain.bbctf.fluxus.co.in
