@@ -11,7 +11,7 @@ services:
   web3:
     build: "./web/Hi-Score"
     ports:
-      - "1003:8080"
+      - "1003:5000"
   misc1:
     build: "./misc/Virus Attack"
     ports:

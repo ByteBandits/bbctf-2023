@@ -1,15 +1,17 @@
-import http.server
-import socketserver
+from flask import Flask, render_template, send_from_directory
 
-PORT = 8080
+app = Flask(__name__)
 
-class RequestHandler(http.server.SimpleHTTPRequestHandler):
-    def do_GET(self):
-        if self.path == '/':
-            self.path = '/index.html'
-        
-        return http.server.SimpleHTTPRequestHandler.do_GET(self)
 
-with socketserver.TCPServer(("", PORT), RequestHandler) as httpd:
-    print("serving at port", PORT)
-    httpd.serve_forever()
+@app.route("/", methods=["GET"])
+def input():
+    return render_template("index.html")
+
+
+@app.route("/.secretion/flag", methods=["GET"])
+def flag():
+    return send_from_directory("static/.secretion", "flag")
+
+
+if __name__ == "__main__":
+    app.run(debug=True, port=8000)

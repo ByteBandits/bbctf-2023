@@ -7,9 +7,11 @@ RUN apt-get update -y && apt-get install -y \
 
 WORKDIR /ctf
 
+RUN pip install flask
+
 COPY . .
 
-EXPOSE 8080
+EXPOSE 5000
 
-CMD [ "python3", "app.py"]
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
 
