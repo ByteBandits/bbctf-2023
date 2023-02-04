@@ -12,6 +12,10 @@ services:
     build: "./web/Hi-Score"
     ports:
       - "1003:5000"
+  web4:
+    build: "./web/Hash Browns"
+    ports:
+      - "1004:5000"
   misc1:
     build: "./misc/Virus Attack"
     ports:
