@@ -1,3 +1,5 @@
 #### Todo
-- [ ] ez pwn dockerfile
-- [ ] peer pressure dockerfile
+- [x] ez pwn dockerfile
+- [ ] peer pressure image and then metadata
+- [ ] onion and cookies
+- [ ] nftically
