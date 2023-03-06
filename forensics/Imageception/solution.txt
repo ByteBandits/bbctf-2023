@@ -1,0 +1,4 @@
+python3 vol.py -f /media/sf_CTF_Files/trial.raw -o /media/sf_CTF_Files/BBCTF/ windows.pslist
+python3 vol.py -f /media/sf_CTF_Files/BBCTF/trial.raw -o /media/sf_CTF_Files/BBCTF/ windows.cmdline
+python3 vol.py -f /media/sf_CTF_Files/BBCTF/trial.raw -o /media/sf_CTF_Files/BBCTF/ windows.filescan | grep imageception
+python3 vol.py -f /media/sf_CTF_Files/trial.raw -o /media/sf_CTF_Files/BBCTF/ windows.dumpfiles --virtaddr 0xa08f6ca23200
